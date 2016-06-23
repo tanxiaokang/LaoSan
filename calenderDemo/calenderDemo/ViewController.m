@@ -6,6 +6,7 @@
 //  Copyright © 2016年 Demo. All rights reserved.
 //
 
+
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -16,8 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+}
+- (IBAction)btnClicked:(id)sender {
+    [self presentViewController:[calenderCollectionViewController new] animated:YES completion:nil];
+     
+
 }
 
 - (void)didReceiveMemoryWarning {
