@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"calenderCell";
     
     for (int i=1; i<32; i++) {
         calenderModel *model = [calenderModel new];
-        model.show = i>10 && i<20 ? YES : NO;
+        model.show = NO;
     
         model.dataString = [NSString stringWithFormat:@"%d",i];
         [_timeMArray addObject:model];
@@ -96,22 +96,33 @@ static NSString * const reuseIdentifier = @"calenderCell";
 
 #pragma mark <UICollectionViewDelegate>
 
+- (void)show:(NSString *)title msg:(NSString *)msg{
+    [[[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+}
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     calenderCollectionViewCell *cell = (calenderCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
+
+    
     switch (cell.model.show) {
         case 0:
         {
-            calenderModel *model = _timeMArray[indexPath.row];
-            model.show = YES;
-            _timeMArray[indexPath.row] = model;
-            [self.collectionView reloadData];
+            //只能本天签到
+            if ([cell.model.dataString isEqualToString:@"23"]) {
+                calenderModel *model = _timeMArray[indexPath.row];
+                model.show = YES;
+                _timeMArray[indexPath.row] = model;
+                [self.collectionView reloadData];
+            }else{
+                [self show:@"温馨提示" msg:@"只能签到本天"];
+            }
+            
         }
             break;
         case 1:
-            [[[UIAlertView alloc] initWithTitle:@"提示" message:@"已签到" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+            [self show:@"温馨提示" msg:@"已签到"];
             break;
             
         default:
