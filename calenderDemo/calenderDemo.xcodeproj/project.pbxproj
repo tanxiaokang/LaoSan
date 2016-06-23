@@ -98,11 +98,11 @@
 		DCF868531D1BEC3800CD768A /* calendar */ = {
 			isa = PBXGroup;
 			children = (
+				DCC2BAD01D1BF11D00844A1F /* calenderCollectionViewController.h */,
+				DCC2BAD11D1BF11D00844A1F /* calenderCollectionViewController.m */,
 				DCC2BACD1D1BF11D00844A1F /* calenderCollectionViewCell.h */,
 				DCC2BACE1D1BF11D00844A1F /* calenderCollectionViewCell.m */,
 				DCC2BACF1D1BF11D00844A1F /* calenderCollectionViewCell.xib */,
-				DCC2BAD01D1BF11D00844A1F /* calenderCollectionViewController.h */,
-				DCC2BAD11D1BF11D00844A1F /* calenderCollectionViewController.m */,
 				DCC2BAD21D1BF11D00844A1F /* calenderCollectionViewHeadView.xib */,
 				DCC2BAD31D1BF11D00844A1F /* calenderModel.h */,
 				DCC2BAD41D1BF11D00844A1F /* calenderModel.m */,

@@ -10,4 +10,6 @@
 
 @interface calenderCollectionViewController : UICollectionViewController
 
+
+@property (nonatomic, assign) NSString *theDay;//当前日子 ps: 26号,传26
 @end

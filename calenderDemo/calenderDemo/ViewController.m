@@ -20,9 +20,10 @@
     
 }
 - (IBAction)btnClicked:(id)sender {
-    [self presentViewController:[calenderCollectionViewController new] animated:YES completion:nil];
-     
-
+    calenderCollectionViewController *vc = [calenderCollectionViewController new];
+    vc.theDay = @"33";
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

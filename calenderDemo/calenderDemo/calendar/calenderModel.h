@@ -10,7 +10,8 @@
 
 @interface calenderModel : NSObject
 
-@property (nonatomic, assign) BOOL show;
+@property (nonatomic, assign) BOOL show;//是否显示签到图片
 
-@property (nonatomic, strong) NSString *dataString;
+@property (nonatomic, strong) NSString *dataString;//日期
+
 @end

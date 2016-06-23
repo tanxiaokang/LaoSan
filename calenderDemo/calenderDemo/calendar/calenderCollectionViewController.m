@@ -17,6 +17,9 @@
 
 static NSString * const reuseIdentifier = @"calenderCell";
 
+
+#pragma mark - system
+
 - (instancetype)init
 {
     // 创建一个流水布局
@@ -41,9 +44,26 @@ static NSString * const reuseIdentifier = @"calenderCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self config];
 }
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    //加载完数据在执行
+    [self assisdidSelectRow];
+}
+
+#pragma mark - config
+//自动签到
+- (void)assisdidSelectRow{
+    //-1 cell是从0开始计算的 
+    NSIndexPath *indexpath = [NSIndexPath indexPathForRow:[_theDay integerValue]-1 inSection:0];
+    NSLog(@"%@",_theDay);
+    //实现点击所调用的方法
+    [self collectionView:self.collectionView didSelectItemAtIndexPath:indexpath];
+
+}
+//配置
 - (void)config{
     
     //BackgroundColor
@@ -57,7 +77,7 @@ static NSString * const reuseIdentifier = @"calenderCell";
     // Do any additional setup after loading the view.
     [self configData];
 }
-
+//懒加载
 - (void)configData{
     _timeMArray = [NSMutableArray new];
     
@@ -69,7 +89,7 @@ static NSString * const reuseIdentifier = @"calenderCell";
         [_timeMArray addObject:model];
     }
     [self.collectionView reloadData];
-    
+   
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -103,28 +123,28 @@ static NSString * const reuseIdentifier = @"calenderCell";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     calenderCollectionViewCell *cell = (calenderCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    
-
-    
     switch (cell.model.show) {
         case 0:
         {
             //只能本天签到
-            if ([cell.model.dataString isEqualToString:@"23"]) {
+            NSString *theDay = [NSString stringWithFormat:@"%ld",[_theDay integerValue]];
+            
+            if ([cell.model.dataString isEqualToString:theDay]) {
                 calenderModel *model = _timeMArray[indexPath.row];
                 model.show = YES;
                 _timeMArray[indexPath.row] = model;
+                [self show:@"温馨提示" msg:@"签到完成"];
                 [self.collectionView reloadData];
-            }else{
-                [self show:@"温馨提示" msg:@"只能签到本天"];
-            }
-            
+                
+            }else [self show:@"温馨提示" msg:@"只能签到本天"];
         }
             break;
         case 1:
+        {
             [self show:@"温馨提示" msg:@"已签到"];
-            break;
+        }
             
+            break;
         default:
             break;
     }
