@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DCC2BACC1D1BCF1400844A1F /* calenderCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2BACB1D1BCF1400844A1F /* calenderCollectionViewController.m */; };
+		DCC2BAD51D1BF11D00844A1F /* calenderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2BACE1D1BF11D00844A1F /* calenderCollectionViewCell.m */; };
+		DCC2BAD61D1BF11D00844A1F /* calenderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC2BACF1D1BF11D00844A1F /* calenderCollectionViewCell.xib */; };
+		DCC2BAD71D1BF11D00844A1F /* calenderCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2BAD11D1BF11D00844A1F /* calenderCollectionViewController.m */; };
+		DCC2BAD81D1BF11D00844A1F /* calenderCollectionViewHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC2BAD21D1BF11D00844A1F /* calenderCollectionViewHeadView.xib */; };
+		DCC2BAD91D1BF11D00844A1F /* calenderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC2BAD41D1BF11D00844A1F /* calenderModel.m */; };
 		DCF8682B1D1BBD4500CD768A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF8682A1D1BBD4500CD768A /* main.m */; };
 		DCF8682E1D1BBD4500CD768A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF8682D1D1BBD4500CD768A /* AppDelegate.m */; };
 		DCF868311D1BBD4500CD768A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF868301D1BBD4500CD768A /* ViewController.m */; };
 		DCF868341D1BBD4500CD768A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF868321D1BBD4500CD768A /* Main.storyboard */; };
 		DCF868361D1BBD4500CD768A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF868351D1BBD4500CD768A /* Assets.xcassets */; };
 		DCF868391D1BBD4500CD768A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF868371D1BBD4500CD768A /* LaunchScreen.storyboard */; };
-		DCF8684B1D1BD3BC00CD768A /* calenderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF868491D1BD3BC00CD768A /* calenderCollectionViewCell.m */; };
-		DCF8684C1D1BD3BC00CD768A /* calenderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF8684A1D1BD3BC00CD768A /* calenderCollectionViewCell.xib */; };
-		DCF868501D1BE12700CD768A /* calenderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF8684F1D1BE12700CD768A /* calenderModel.m */; };
-		DCF868521D1BE83400CD768A /* calenderCollectionViewHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF868511D1BE83400CD768A /* calenderCollectionViewHeadView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DCC2BACA1D1BCF1400844A1F /* calenderCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = calenderCollectionViewController.h; path = ../calenderCollectionViewController.h; sourceTree = "<group>"; };
-		DCC2BACB1D1BCF1400844A1F /* calenderCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = calenderCollectionViewController.m; path = ../calenderCollectionViewController.m; sourceTree = "<group>"; };
+		DCC2BACD1D1BF11D00844A1F /* calenderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calenderCollectionViewCell.h; sourceTree = "<group>"; };
+		DCC2BACE1D1BF11D00844A1F /* calenderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calenderCollectionViewCell.m; sourceTree = "<group>"; };
+		DCC2BACF1D1BF11D00844A1F /* calenderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = calenderCollectionViewCell.xib; sourceTree = "<group>"; };
+		DCC2BAD01D1BF11D00844A1F /* calenderCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calenderCollectionViewController.h; sourceTree = "<group>"; };
+		DCC2BAD11D1BF11D00844A1F /* calenderCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calenderCollectionViewController.m; sourceTree = "<group>"; };
+		DCC2BAD21D1BF11D00844A1F /* calenderCollectionViewHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = calenderCollectionViewHeadView.xib; sourceTree = "<group>"; };
+		DCC2BAD31D1BF11D00844A1F /* calenderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calenderModel.h; sourceTree = "<group>"; };
+		DCC2BAD41D1BF11D00844A1F /* calenderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calenderModel.m; sourceTree = "<group>"; };
 		DCF868261D1BBD4500CD768A /* calenderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calenderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF8682A1D1BBD4500CD768A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCF8682C1D1BBD4500CD768A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,13 +39,7 @@
 		DCF868351D1BBD4500CD768A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCF868381D1BBD4500CD768A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCF8683A1D1BBD4500CD768A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCF868481D1BD3BC00CD768A /* calenderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = calenderCollectionViewCell.h; path = ../calenderCollectionViewCell.h; sourceTree = "<group>"; };
-		DCF868491D1BD3BC00CD768A /* calenderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = calenderCollectionViewCell.m; path = ../calenderCollectionViewCell.m; sourceTree = "<group>"; };
-		DCF8684A1D1BD3BC00CD768A /* calenderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = calenderCollectionViewCell.xib; path = ../calenderCollectionViewCell.xib; sourceTree = "<group>"; };
 		DCF8684D1D1BD40500CD768A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		DCF8684E1D1BE12700CD768A /* calenderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = calenderModel.h; path = ../calenderModel.h; sourceTree = "<group>"; };
-		DCF8684F1D1BE12700CD768A /* calenderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = calenderModel.m; path = ../calenderModel.m; sourceTree = "<group>"; };
-		DCF868511D1BE83400CD768A /* calenderCollectionViewHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = calenderCollectionViewHeadView.xib; path = ../calenderCollectionViewHeadView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,14 +98,14 @@
 		DCF868531D1BEC3800CD768A /* calendar */ = {
 			isa = PBXGroup;
 			children = (
-				DCC2BACA1D1BCF1400844A1F /* calenderCollectionViewController.h */,
-				DCC2BACB1D1BCF1400844A1F /* calenderCollectionViewController.m */,
-				DCF8684E1D1BE12700CD768A /* calenderModel.h */,
-				DCF8684F1D1BE12700CD768A /* calenderModel.m */,
-				DCF868511D1BE83400CD768A /* calenderCollectionViewHeadView.xib */,
-				DCF868481D1BD3BC00CD768A /* calenderCollectionViewCell.h */,
-				DCF868491D1BD3BC00CD768A /* calenderCollectionViewCell.m */,
-				DCF8684A1D1BD3BC00CD768A /* calenderCollectionViewCell.xib */,
+				DCC2BACD1D1BF11D00844A1F /* calenderCollectionViewCell.h */,
+				DCC2BACE1D1BF11D00844A1F /* calenderCollectionViewCell.m */,
+				DCC2BACF1D1BF11D00844A1F /* calenderCollectionViewCell.xib */,
+				DCC2BAD01D1BF11D00844A1F /* calenderCollectionViewController.h */,
+				DCC2BAD11D1BF11D00844A1F /* calenderCollectionViewController.m */,
+				DCC2BAD21D1BF11D00844A1F /* calenderCollectionViewHeadView.xib */,
+				DCC2BAD31D1BF11D00844A1F /* calenderModel.h */,
+				DCC2BAD41D1BF11D00844A1F /* calenderModel.m */,
 			);
 			path = calendar;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCF8684C1D1BD3BC00CD768A /* calenderCollectionViewCell.xib in Resources */,
+				DCC2BAD61D1BF11D00844A1F /* calenderCollectionViewCell.xib in Resources */,
 				DCF868391D1BBD4500CD768A /* LaunchScreen.storyboard in Resources */,
-				DCF868521D1BE83400CD768A /* calenderCollectionViewHeadView.xib in Resources */,
+				DCC2BAD81D1BF11D00844A1F /* calenderCollectionViewHeadView.xib in Resources */,
 				DCF868361D1BBD4500CD768A /* Assets.xcassets in Resources */,
 				DCF868341D1BBD4500CD768A /* Main.storyboard in Resources */,
 			);
@@ -183,12 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC2BAD51D1BF11D00844A1F /* calenderCollectionViewCell.m in Sources */,
 				DCF868311D1BBD4500CD768A /* ViewController.m in Sources */,
 				DCF8682E1D1BBD4500CD768A /* AppDelegate.m in Sources */,
-				DCF8684B1D1BD3BC00CD768A /* calenderCollectionViewCell.m in Sources */,
-				DCC2BACC1D1BCF1400844A1F /* calenderCollectionViewController.m in Sources */,
 				DCF8682B1D1BBD4500CD768A /* main.m in Sources */,
-				DCF868501D1BE12700CD768A /* calenderModel.m in Sources */,
+				DCC2BAD71D1BF11D00844A1F /* calenderCollectionViewController.m in Sources */,
+				DCC2BAD91D1BF11D00844A1F /* calenderModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
