@@ -9,8 +9,7 @@
 #import "calenderCollectionViewController.h"
 
 @interface calenderCollectionViewController ()
-
-@property (nonatomic, strong) NSArray *timeArray;/*当前月份天数*/
+@property (nonatomic, strong) NSMutableArray *timeMArray;/*当前月份天数*/
 
 @end
 
@@ -24,7 +23,7 @@ static NSString * const reuseIdentifier = @"calenderCell";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
     // 设置cell的尺寸
-    layout.itemSize = CGSizeMake(50, 50);
+    layout.itemSize = CGSizeMake(60, 60);
     
     // 设置滚动的方向
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -56,26 +55,26 @@ static NSString * const reuseIdentifier = @"calenderCell";
     // Register cell classes
     [self.collectionView registerClass:[calenderCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     // Do any additional setup after loading the view.
-    
+    [self configData];
 }
 
 - (void)configData{
+    _timeMArray = [NSMutableArray new];
+    
+    for (int i=1; i<32; i++) {
+        calenderModel *model = [calenderModel new];
+        model.show = i>10 && i<20 ? YES : NO;
+    
+        model.dataString = [NSString stringWithFormat:@"%d",i];
+        [_timeMArray addObject:model];
+    }
+    [self.collectionView reloadData];
     
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -85,13 +84,13 @@ static NSString * const reuseIdentifier = @"calenderCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 100;
+    return _timeMArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     calenderCollectionViewCell *cell = (calenderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    cell.backgroundColor = MJRandomColor;
+    calenderModel *model = _timeMArray[indexPath.row];
+    cell.model = model;
     return cell;
 }
 
@@ -100,6 +99,25 @@ static NSString * const reuseIdentifier = @"calenderCell";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    calenderCollectionViewCell *cell = (calenderCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    switch (cell.model.show) {
+        case 0:
+        {
+            calenderModel *model = _timeMArray[indexPath.row];
+            model.show = YES;
+            _timeMArray[indexPath.row] = model;
+            [self.collectionView reloadData];
+        }
+            break;
+        case 1:
+            [[[UIAlertView alloc] initWithTitle:@"提示" message:@"已签到" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+            break;
+            
+        default:
+            break;
+    }
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -125,5 +143,7 @@ static NSString * const reuseIdentifier = @"calenderCell";
 	
 }
 
-
+-(void)dealloc{
+    
+}
 @end

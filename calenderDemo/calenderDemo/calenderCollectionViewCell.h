@@ -10,4 +10,7 @@
 
 @interface calenderCollectionViewCell : UICollectionViewCell
 
+
+@property (nonatomic, strong) calenderModel *model;
+
 @end

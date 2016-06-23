@@ -12,9 +12,35 @@
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="205" height="122"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-dL-YNs">
+                        <rect key="frame" x="0.0" y="0.0" width="205" height="122"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ1-aj-7V6">
+                        <rect key="frame" x="98" y="5" width="8" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="5qF-Pj-BAR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="RJ1-aj-7V6" firstAttribute="centerX" secondItem="Mwr-dL-YNs" secondAttribute="centerX" id="BoQ-YL-A6c"/>
+                <constraint firstItem="Mwr-dL-YNs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CpQ-Tf-ggV"/>
+                <constraint firstAttribute="trailing" secondItem="Mwr-dL-YNs" secondAttribute="trailing" id="HLY-uf-F2P"/>
+                <constraint firstItem="RJ1-aj-7V6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="NSL-lv-Rzd"/>
+                <constraint firstItem="Mwr-dL-YNs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="caI-jB-LCF"/>
+                <constraint firstAttribute="bottom" secondItem="Mwr-dL-YNs" secondAttribute="bottom" id="sa6-Er-CdD"/>
+            </constraints>
             <size key="customSize" width="205" height="122"/>
+            <connections>
+                <outlet property="dataLabel" destination="RJ1-aj-7V6" id="GCK-uM-vv2"/>
+                <outlet property="imageView" destination="Mwr-dL-YNs" id="sFR-g3-BW5"/>
+            </connections>
             <point key="canvasLocation" x="221.5" y="310"/>
         </collectionViewCell>
     </objects>

@@ -16,6 +16,8 @@
 		DCF868391D1BBD4500CD768A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF868371D1BBD4500CD768A /* LaunchScreen.storyboard */; };
 		DCF8684B1D1BD3BC00CD768A /* calenderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF868491D1BD3BC00CD768A /* calenderCollectionViewCell.m */; };
 		DCF8684C1D1BD3BC00CD768A /* calenderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF8684A1D1BD3BC00CD768A /* calenderCollectionViewCell.xib */; };
+		DCF868501D1BE12700CD768A /* calenderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF8684F1D1BE12700CD768A /* calenderModel.m */; };
+		DCF868521D1BE83400CD768A /* calenderCollectionViewHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF868511D1BE83400CD768A /* calenderCollectionViewHeadView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		DCF868491D1BD3BC00CD768A /* calenderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calenderCollectionViewCell.m; sourceTree = "<group>"; };
 		DCF8684A1D1BD3BC00CD768A /* calenderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = calenderCollectionViewCell.xib; sourceTree = "<group>"; };
 		DCF8684D1D1BD40500CD768A /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DCF8684E1D1BE12700CD768A /* calenderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calenderModel.h; sourceTree = "<group>"; };
+		DCF8684F1D1BE12700CD768A /* calenderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calenderModel.m; sourceTree = "<group>"; };
+		DCF868511D1BE83400CD768A /* calenderCollectionViewHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = calenderCollectionViewHeadView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,9 @@
 				DCF868301D1BBD4500CD768A /* ViewController.m */,
 				DCC2BACA1D1BCF1400844A1F /* calenderCollectionViewController.h */,
 				DCC2BACB1D1BCF1400844A1F /* calenderCollectionViewController.m */,
+				DCF8684E1D1BE12700CD768A /* calenderModel.h */,
+				DCF8684F1D1BE12700CD768A /* calenderModel.m */,
+				DCF868511D1BE83400CD768A /* calenderCollectionViewHeadView.xib */,
 				DCF868481D1BD3BC00CD768A /* calenderCollectionViewCell.h */,
 				DCF868491D1BD3BC00CD768A /* calenderCollectionViewCell.m */,
 				DCF8684A1D1BD3BC00CD768A /* calenderCollectionViewCell.xib */,
@@ -154,6 +162,7 @@
 			files = (
 				DCF8684C1D1BD3BC00CD768A /* calenderCollectionViewCell.xib in Resources */,
 				DCF868391D1BBD4500CD768A /* LaunchScreen.storyboard in Resources */,
+				DCF868521D1BE83400CD768A /* calenderCollectionViewHeadView.xib in Resources */,
 				DCF868361D1BBD4500CD768A /* Assets.xcassets in Resources */,
 				DCF868341D1BBD4500CD768A /* Main.storyboard in Resources */,
 			);
@@ -171,6 +180,7 @@
 				DCF8684B1D1BD3BC00CD768A /* calenderCollectionViewCell.m in Sources */,
 				DCC2BACC1D1BCF1400844A1F /* calenderCollectionViewController.m in Sources */,
 				DCF8682B1D1BBD4500CD768A /* main.m in Sources */,
+				DCF868501D1BE12700CD768A /* calenderModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +297,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/calenderDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = calenderDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calenderDemo.calender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,6 +314,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/calenderDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = calenderDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calenderDemo.calender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
